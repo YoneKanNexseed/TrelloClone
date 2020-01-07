@@ -61,7 +61,7 @@ $(document).on('click', '.add-btn', () => {
 });
 
 $('li', $('.task-container')).draggable({
-  revert: "invalid", // when not dropped, the item will revert back to its initial position
+  revert: "invalid",
   containment: "document",
   helper: "clone",
   cursor: "move"

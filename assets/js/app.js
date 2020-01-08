@@ -51,6 +51,7 @@ $(document).on('click', '.add-btn', () => {
     },
     dataType: "json",
   }).done(data => {
+    console.log(data);
     $('#todo .task-container').prepend(Task({ task: newTask }));
     $('#new-task').parent().remove();
   }).fail(error => {

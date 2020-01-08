@@ -53,6 +53,12 @@ $(document).on('click', '.add-btn', () => {
   }).done(data => {
     const id = data.id;
     $('#todo .task-container').prepend(Task({ task: newTask, id: id }));
+    $('li', $('.task-container')).draggable({
+      revert: "invalid",
+      containment: "document",
+      helper: "clone",
+      cursor: "move"
+    });
     $('#new-task').parent().remove();
   }).fail(error => {
     console.log(error);

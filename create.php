@@ -22,6 +22,8 @@ $prepare->bindValue(':status', TODO, PDO::PARAM_INT);
 
 $result = $prepare->execute();
 
+$lastInsertId = $dbh->lastInsertId();
+
 // response
 header("Access-Control-Allow-Origin: *");
-echo json_encode(['message' => 'success']);
+echo json_encode(['id' => $lastInsertId]);

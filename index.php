@@ -39,7 +39,7 @@ $dones = findByStatus(DONE, $dbh);
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/modal.css">
 
-  <title>Document</title>
+  <title>NexSeed-Task</title>
 </head>
 <body>
 

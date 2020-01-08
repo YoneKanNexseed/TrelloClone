@@ -1,5 +1,5 @@
-const Task = ({ task }) => `
-  <li class="task">${task}</li>
+const Task = ({ task, id }) => `
+  <li class="task"data-id="${id}">${task}</li>
 `;
 
 const InputTask = () => `
@@ -51,8 +51,8 @@ $(document).on('click', '.add-btn', () => {
     },
     dataType: "json",
   }).done(data => {
-    console.log(data);
-    $('#todo .task-container').prepend(Task({ task: newTask }));
+    const id = data.id;
+    $('#todo .task-container').prepend(Task({ task: newTask, id: id }));
     $('#new-task').parent().remove();
   }).fail(error => {
     console.log(error);

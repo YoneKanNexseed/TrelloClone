@@ -1,8 +1,8 @@
 <?php
 
-$dsn = $_ENV['DSN'];
-$user = $_ENV['DB_USER'];
-$password = $_ENV['DB_PASSWORD'];
+$dsn = 'mysql:dbname=TrelloClone;host=127.0.0.1';
+$user = 'root';
+$password = '';
 
 try {
     $dbh = new PDO($dsn, $user, $password);
